@@ -9,7 +9,7 @@ Notifications about CAMP releases will be available through the [MetaSUB Twitter
 
 Please post questions and issues related to CAMP tools on the GitHub repository of the specific module in question.
 
-![Overview](https://github.com/MetaSUB-CAMP/.github/blob/main/Fig1.png)
+![Overview](https://github.com/MetaSUB-CAMP/.github/blob/main/profile/Fig1.2.png)
 
 An overview of the available metagenomics analysis modules in the Core Analysis Modular Pipeline (CAMP). All modules share the same internal architecture, but wrap a different set of algorithms (shown to the left of each box) customized to its particular analysis goals. Modules that are typically the beginning of analysis projects are coloured light blue, modules that are typically intermediate steps are coloured medium blue, and modules that are typically terminal analysis steps are coloured dark blue.
 
@@ -35,7 +35,7 @@ Processed sequencing reads are mapped back to the de novo assembled contigs usin
 
 #### [MAG Quality-Checking](https://github.com/MetaSUB-CAMP/camp_mag-qc)
 
-The consensus refined MAGs are quality-checked using an array of parameters. CheckM calculates completeness, which is based on the number of lineage-specific marker gene sets present in a MAG, and contamination, which is the number of over-represented multiple copies of a marker gene in a MAG (18). gunc is also used to assess contamination (19). MAGs are classified using GTDB-Tk, which relies on approximately calculating average nucleotide identity (ANI) to a database of reference genomes (20). For MAGs with a species classification, their contig content is compared to the species' reference genome and genome-based completion, misassembly, and non-alignment statistics calculated using QUAST (21).
+The consensus refined MAGs are quality-checked using an array of parameters. CheckM2 calculates completeness, which is based on the number of lineage-specific marker gene sets present in a MAG, and contamination, which is the number of over-represented multiple copies of a marker gene in a MAG (18). gunc is also used to assess contamination (19). MAGs are classified using GTDB-Tk, which relies on approximately calculating average nucleotide identity (ANI) to a database of reference genomes (20). For MAGs with a species classification, their contig content is compared to the species' reference genome and genome-based completion, misassembly, and non-alignment statistics calculated using QUAST (21).
 OTHER ANALYSIS GOALS
 
 ### Other Analysis Goals
@@ -55,6 +55,10 @@ Open reading frames (ORFs) are identified in the de novo assembly using Bakta, a
 #### [Nanopore Long-Read Quality Control](https://github.com/MetaSUB-CAMP/camp_nanopore-quality-control)
 
 Raw sequencing datasets are trimmed using PoreChop, and then low-quality bases are filtered out using NanoFilt (35, 36). Host reads are optionally removed using Minimap2 (37). FastQC and MultiQC are used to generate overviews (ex. parameters such as per-base quality scores, sequence duplication levels) of processed dataset quality (6,7). 
+
+####  Decontamination
+
+The decontamination module is still under construction and is not currently publicly available. A feature table of relative abundances (ex. operational taxonomic units (OTUs), taxa, metagenome-assembled genomes) is provided to Decontam and Recentrifuge, each of which estimates contamination from feature abundances either within or between samples respectively (38, 39).
 
 ## Making New Analysis Modules
 
