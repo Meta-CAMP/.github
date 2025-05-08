@@ -9,9 +9,9 @@ The core philosophy of the CAMP is anchored in **modularity**, which is meant to
 
 Please post questions and issues related to CAMP tools on the GitHub repository of the specific module in question.
 
-![Overview](https://github.com/Meta-CAMP/.github/blob/main/profile/Fig1.3.png)
+![Overview](https://github.com/Meta-CAMP/.github/blob/main/profile/Fig1.4.png)
 
-An overview of the available metagenomics analysis modules in the Core Analysis Modular Pipeline (CAMP). All modules share the same internal architecture, but wrap a different set of algorithms (shown to the left of each box) customized to its particular analysis goals. Modules that are typically the beginning of analysis projects are coloured light blue, modules that are typically intermediate steps are coloured medium blue, and modules that are typically terminal analysis steps are coloured dark blue. The CAMP is under active development!
+Fig. 1: An overview of the available metagenomics analysis modules in the Core Analysis Modular Pipeline (CAMP). All modules share the same internal architecture, but wrap a different set of algorithms (shown to the left of each box) customized to its particular analysis goals. Modules that are typically the beginning of analysis projects are coloured light red, modules that are typically intermediate steps are coloured medium red, and modules that are typically terminal analysis steps are coloured dark red. Typical first inputs are indicated by the boxed DNA symbols, while terminal outputs that report some form of quality metric or taxonomic classification information are indicated by the boxed graphic bacteria. Functional profiling outputs are indicated with a boxed wrench and screwdriver. Modules that contain built-in dataviz notebooks contain a bar graph symbol, and modules that require database downloads contain a cylinder.
 
 ## Available Analysis Modules
 
